@@ -16,6 +16,9 @@ import DivyaWellsFargo from "@/assets/InterviewExperiences/DivyaKannathaal_2026_
 import AjayTekion from "@/assets/InterviewExperiences/AjayMalarTekion.pdf";
 import AppianQE from "@/assets/InterviewExperiences/APPIAN_QE_interviewexp.pdf";
 import BaranidharanIDFC from "@/assets/InterviewExperiences/Baranidharan_2026_IDFC_First_Bank.pdf";
+import Inbavanan from "@/assets/InterviewExperiences/InbavananKRtBrick.pdf";
+import Jayavarshini from "@/assets/InterviewExperiences/JayavarshiniVerizon.pdf";
+import Sachin from "@/assets/InterviewExperiences/Sachin_2026_Appian.pdf";
 
 
 interface Experience {
@@ -45,11 +48,16 @@ const Experience = () => {
     { name: "Tasneem A", company: "Appian", role: "Software Developer",year: 2025 , dept: "Department of Computer Technology", pdf: TasneemAppian },
     { name: "Sushmitha", company: "American Express", role: "Software Developer",year: 2025 , dept: "Department of Computer Technology", pdf: SushmithaAmex },
     { name: "Sanjeev A", company: "SAP Labs", role: "Software Developer",year: 2025 , dept: "Department of Computer Technology", pdf: SAPLabsSanjeev },
-    { name: "Lokesh", company: "Appian", role: "Software Developer", year: 2025 ,dept: "Department of Computer Technology", pdf: LokeshAppian },
+    { name: "Lokesh D", company: "Appian", role: "Software Engineer", year: 2025 ,dept: "Department of Computer Technology", pdf: LokeshAppian },
     { name: "Divya Kannathaal", company: "Wells Fargo", role: "Software Developer",year: 2025 , dept: "Department of Computer Technology", pdf: DivyaWellsFargo },
-    { name: "Ajay Malar M", company: "Tekion", role: "Software Developer",year: 2025 , dept: "Department of Computer Technology", pdf: AjayTekion },
-    { name: "Appian QE", company: "Appian", role: "Software Developer",year: 2025 , dept: "Department of Computer Technology", pdf: AppianQE },
+    { name: "Ajay Malar M", company: "Tekion", role: "Associate Software Developer",year: 2025 , dept: "Department of Computer Technology", pdf: AjayTekion },
+    { name: "Mansi CM", company: "Appian", role: "Product Engineer",year: 2025 , dept: "Department of Computer Technology", pdf: AppianQE },
     { name: "Baranidharan", company: "IDFC First Bank", role: "Software Developer",year: 2025 , dept: "Department of Computer Technology", pdf: BaranidharanIDFC },
+    { name: "Inbavanan I", company: "RT Brick", role: "Associate Software Developer",year: 2025 , dept: "Department of Computer Technology", pdf: Inbavanan },
+    { name: "Jayavarshini", company: "Verizon", role: "Software Developer",year: 2025 , dept: "Department of Computer Technology", pdf: Jayavarshini },
+    { name: "Sachin", company: "Appian", role: "Software Developer",year: 2025 , dept: "Department of Computer Technology", pdf: Sachin },
+ 
+ 
   ];
   
   const filteredExperiences = experiences.filter(

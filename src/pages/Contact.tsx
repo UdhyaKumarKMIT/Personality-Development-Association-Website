@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { send } from "@emailjs/browser"; // EmailJS
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -15,14 +16,39 @@ const Contact = () => {
     email: "",
     message: "",
   });
+  const [loading, setLoading] = useState(false);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    toast({
-      title: "Message Sent!",
-      description: "Thank you for reaching out. We'll get back to you soon.",
-    });
-    setFormData({ name: "", email: "", message: "" });
+    setLoading(true);
+
+    send(
+      "service_2k17xom",       // replace with your EmailJS service ID
+      "template_3llmnly",      // replace with your EmailJS template ID
+      {
+        from_name: formData.name,
+        from_email: formData.email,
+        message: formData.message,
+        to_email: "pda@mitindia.edu",
+      },
+      "7SZh47fUDxq69DUaL"        // replace with your EmailJS public key
+    )
+      .then(() => {
+        toast({
+          title: "Message Sent!",
+          description: "Thank you for reaching out. We'll get back to you soon.",
+        });
+        setFormData({ name: "", email: "", message: "" });
+      })
+      .catch((err) => {
+        toast({
+          title: "Error",
+          description: "Something went wrong. Please try again later.",
+          variant: "destructive",
+        });
+        console.error(err);
+      })
+      .finally(() => setLoading(false));
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -96,8 +122,8 @@ const Contact = () => {
                         rows={6}
                       />
                     </div>
-                    <Button type="submit" variant="cta" size="lg" className="w-full">
-                      Send Message
+                    <Button type="submit" variant="cta" size="lg" className="w-full" disabled={loading}>
+                      {loading ? "Sending..." : "Send Message"}
                     </Button>
                   </form>
 
@@ -171,8 +197,8 @@ const Contact = () => {
 
                 {/* Embedded Map */}
                 <div className="rounded-lg overflow-hidden shadow-card h-80">
-                  <iframe 
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3007.4085689273056!2d80.13709327373529!3d12.94837538736484!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a525fac595c29ff%3A0xb76082ae18b51418!2sMadras%20Institute%20of%20Technology%2C%20Anna%20University!5e1!3m2!1sen!2sin!4v1758911526299!5m2!1sen!2sin" 
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3007.4085689273056!2d80.13709327373529!3d12.94837538736484!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a525fac595c29ff%3A0xb76082ae18b51418!2sMadras%20Institute%20of%20Technology%2C%20Anna%20University!5e1!3m2!1sen!2sin!4v1758911526299!5m2!1sen!2sin"
                     width="100%"
                     height="100%"
                     style={{ border: 0 }}
