@@ -9,44 +9,44 @@ All colors MUST be HSL.
 @layer base {
   :root {
     /* PDA Color Palette */
-    --background: 39 42% 82%;  /* #E5D9C0 - Pearl */
-    --foreground: 298 19% 26%;  /* #4F3750 - English Violet */
+    --background: 37 100% 94%;  /* #FEF3E2 - Cream */
+    --foreground: 0 0% 20%;
 
-    --card: 0 0% 100%;  /* #FFFFFF - White */
-    --card-foreground: 298 19% 26%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 20%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 298 19% 26%;
+    --popover-foreground: 0 0% 20%;
 
-    --primary: 347 57% 48%;  /* #C03450 - Rose Red */
-    --primary-foreground: 0 0% 100%;
+    --primary: 0 98% 43%;  /* #DD0303 - Deep Red */
+    --primary-foreground: 37 100% 94%;
 
-    --secondary: 48 100% 50%;  /* #FDCD00 - Jonquil */
-    --secondary-foreground: 298 19% 26%;
+    --secondary: 40 96% 58%;  /* #FAB12F - Golden Yellow */
+    --secondary-foreground: 0 0% 20%;
 
-    --accent: 48 100% 50%;  /* #FDCD00 - Jonquil */
-    --accent-foreground: 298 19% 26%;
+    --accent: 24 96% 58%;  /* #FA812F - Orange */
+    --accent-foreground: 0 0% 20%;
 
-    --muted: 39 30% 88%;
-    --muted-foreground: 298 19% 45%;
+    --muted: 37 50% 90%;
+    --muted-foreground: 0 0% 45%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 100%;
+    --destructive-foreground: 0 0% 98%;
 
-    --border: 39 30% 75%;
-    --input: 39 30% 75%;
-    --ring: 347 57% 48%;
+    --border: 37 30% 85%;
+    --input: 37 30% 85%;
+    --ring: 0 98% 43%;
 
     --radius: 0.75rem;
     
     /* Custom gradients */
-    --gradient-navbar: linear-gradient(135deg, hsl(298 19% 26%), hsl(298 19% 35%));
-    --gradient-hero: linear-gradient(135deg, hsl(48 100% 50% / 0.1), hsl(347 57% 48% / 0.1));
-    --gradient-accent: linear-gradient(135deg, hsl(347 57% 48%), hsl(48 100% 50%));
+    --gradient-navbar: linear-gradient(135deg, hsl(40 96% 58%), hsl(24 96% 58%));
+    --gradient-hero: linear-gradient(135deg, hsl(40 96% 58% / 0.1), hsl(24 96% 58% / 0.1));
+    --gradient-accent: linear-gradient(135deg, hsl(0 98% 43%), hsl(24 96% 58%));
     
     /* Shadows */
     --shadow-card: 0 4px 20px hsl(0 0% 0% / 0.08);
-    --shadow-hover: 0 8px 30px hsl(347 57% 48% / 0.15);
+    --shadow-hover: 0 8px 30px hsl(0 98% 43% / 0.15);
     
     /* Animations */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -69,33 +69,33 @@ All colors MUST be HSL.
   }
 
   .dark {
-    --background: 298 19% 15%;
-    --foreground: 0 0% 100%;
+    --background: 0 0% 10%;
+    --foreground: 37 100% 94%;
 
-    --card: 298 19% 20%;
-    --card-foreground: 0 0% 100%;
+    --card: 0 0% 15%;
+    --card-foreground: 37 100% 94%;
 
-    --popover: 298 19% 20%;
-    --popover-foreground: 0 0% 100%;
+    --popover: 0 0% 15%;
+    --popover-foreground: 37 100% 94%;
 
-    --primary: 347 57% 48%;
-    --primary-foreground: 0 0% 100%;
+    --primary: 0 98% 43%;
+    --primary-foreground: 37 100% 94%;
 
-    --secondary: 48 100% 50%;
-    --secondary-foreground: 298 19% 15%;
+    --secondary: 40 96% 58%;
+    --secondary-foreground: 0 0% 10%;
 
-    --accent: 48 100% 50%;
-    --accent-foreground: 298 19% 15%;
+    --accent: 24 96% 58%;
+    --accent-foreground: 0 0% 10%;
 
-    --muted: 298 19% 25%;
-    --muted-foreground: 0 0% 70%;
+    --muted: 0 0% 20%;
+    --muted-foreground: 0 0% 60%;
 
     --destructive: 0 62.8% 50%;
-    --destructive-foreground: 0 0% 100%;
+    --destructive-foreground: 37 100% 94%;
 
-    --border: 298 19% 30%;
-    --input: 298 19% 30%;
-    --ring: 347 57% 48%;
+    --border: 0 0% 25%;
+    --input: 0 0% 25%;
+    --ring: 0 98% 43%;
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
