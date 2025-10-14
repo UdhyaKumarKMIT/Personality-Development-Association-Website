@@ -41,7 +41,7 @@ const Experience = () => {
   }
   
   const experiences: Experience[] = [
-    { name: "Udhya Kumar", company: "Nokia", role: "Software Developer", year: 2025 ,dept: "Department of Computer Technology", pdf: UdhyaNokia },
+    { name: "Udhya Kumar K", company: "Nokia", role: "Software Developer", year: 2025 ,dept: "Department of Computer Technology", pdf: UdhyaNokia },
     { name: "Tasneem A", company: "Appian", role: "Software Developer",year: 2025 , dept: "Department of Computer Technology", pdf: TasneemAppian },
     { name: "Sushmitha", company: "American Express", role: "Software Developer",year: 2025 , dept: "Department of Computer Technology", pdf: SushmithaAmex },
     { name: "Sanjeev A", company: "SAP Labs", role: "Software Developer",year: 2025 , dept: "Department of Computer Technology", pdf: SAPLabsSanjeev },
@@ -154,49 +154,54 @@ const Experience = () => {
         </section>
 
         {/* PDF Viewer Modal */}
-        <Dialog open={isModalOpen} onOpenChange={setIsModalOpen}>
-          <DialogContent className="max-w-4xl max-h-[90vh] overflow-hidden">
-            <DialogHeader>
-              <DialogTitle className="text-2xl text-primary">
-                Interview Experience - {selectedExperience?.name}
-              </DialogTitle>
-              <div className="text-sm text-muted-foreground">
-                {selectedExperience?.company} • {selectedExperience?.role}
-              </div>
-            </DialogHeader>
-            <div className="mt-4">
-              <div className="flex gap-2 mb-4">
-                <Button
-                  variant="outline"
-                  onClick={() => window.open(selectedExperience?.pdf, "_blank")}
-                  className="flex-1"
-                >
-                  <FileText size={16} className="mr-2" />
-                  View Full PDF
-                </Button>
-                <Button
-                  variant="cta"
-                  onClick={() => handleDownload(selectedExperience?.pdf || "", `${selectedExperience?.name}.pdf`)}
-                  className="flex-1"
-                >
-                  <Download size={16} className="mr-2" />
-                  Download PDF
-                </Button>
-              </div>
-              <div className="bg-muted/30 rounded-lg p-8 text-center h-96 flex items-center justify-center">
-                <div>
-                  <FileText className="mx-auto text-muted-foreground mb-4" size={64} />
-                  <p className="text-muted-foreground mb-4">
-                    PDF viewer would display here in production
-                  </p>
-                  <p className="text-sm text-muted-foreground">
-                    Click "View Full PDF" or "Download PDF" to access the document
-                  </p>
-                </div>
-              </div>
-            </div>
-          </DialogContent>
-        </Dialog>
+       {/* PDF Viewer Modal */}
+<Dialog open={isModalOpen} onOpenChange={setIsModalOpen}>
+  <DialogContent className="max-w-4xl max-h-[90vh] overflow-hidden">
+    <DialogHeader>
+      <DialogTitle className="text-2xl text-primary">
+        Interview Experience - {selectedExperience?.name}
+      </DialogTitle>
+      <div className="text-sm text-muted-foreground">
+        {selectedExperience?.company} • {selectedExperience?.role}
+      </div>
+    </DialogHeader>
+    <div className="mt-4 flex flex-col gap-4 h-[80vh]">
+      <div className="flex gap-2">
+        <Button
+          variant="outline"
+          onClick={() => window.open(selectedExperience?.pdf, "_blank")}
+          className="flex-1"
+        >
+          <FileText size={16} className="mr-2" />
+          Open in New Tab
+        </Button>
+        <Button
+          variant="cta"
+          onClick={() =>
+            handleDownload(
+              selectedExperience?.pdf || "",
+              `${selectedExperience?.name}.pdf`
+            )
+          }
+          className="flex-1"
+        >
+          <Download size={16} className="mr-2" />
+          Download PDF
+        </Button>
+      </div>
+
+      {/* Embedded PDF */}
+      {selectedExperience?.pdf && (
+        <iframe
+          src={selectedExperience.pdf}
+          className="w-full flex-1 rounded-lg border"
+          title="PDF Viewer"
+        />
+      )}
+    </div>
+  </DialogContent>
+</Dialog>
+
       </main>
       <Footer />
     </div>
