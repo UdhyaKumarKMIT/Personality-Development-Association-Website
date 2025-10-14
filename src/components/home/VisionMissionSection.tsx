@@ -56,13 +56,13 @@ const VisionMissionSection = () => {
               </div>
             </CardHeader>
             <CardContent>
-              <ul className="space-y-2 mt-4">
-                {missionPoints.map((point, index) => (
-                  <li key={index} className="flex items-start gap-2 text-sm text-foreground/80">
+            <ul className="space-y-3">
+                {visionPoints.map((point, index) => (
+                  <li key={index} className="flex items-start gap-3">
                     <div className="mt-1 flex-shrink-0">
-                      <div className="w-1.5 h-1.5 rounded-full bg-secondary"></div>
+                      <div className="w-2 h-2 rounded-full bg-accent"></div>
                     </div>
-                    <span>{point}</span>
+                    <span className="text-foreground/80">{point}</span>
                   </li>
                 ))}
               </ul>

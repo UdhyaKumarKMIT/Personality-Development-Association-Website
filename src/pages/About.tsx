@@ -47,7 +47,7 @@ const About = () => {
         <section className="gradient-hero py-20">
           <div className="container mx-auto px-4 text-center">
             <h1 className="text-5xl font-bold text-primary mb-4">About PDA</h1>
-            <p className="text-xl text-foreground/80 max-w-3xl mx-auto">
+            <p className="text-xl text-foreground/90  mx-auto">
               Empowering students to discover their potential and build strong personalities
             </p>
           </div>
@@ -58,7 +58,7 @@ const About = () => {
           <div className="container mx-auto px-4 max-w-4xl">
             <h2 className="text-4xl font-bold text-primary mb-8 text-center">Our Story</h2>
             <div className="prose prose-lg max-w-none">
-              <p className="text-foreground/80 leading-relaxed mb-6 text-justify">
+              <p className="text-foreground/90 leading-relaxed mb-6 text-justify">
               The Personality Development Association (PDA) at MIT was founded in February 1984 by Shri K.V. Narayanan and a small group of passionate students. What started as a simple idea—to help students truly discover themselves—has grown into a vibrant community focused on overall personality development. Through workshops, activities, and events, PDA empowers students to build confidence, communicate effectively, and grow as individuals.
          </p>
               <p className="text-foreground/80 leading-relaxed mb-6 text-justify" >
