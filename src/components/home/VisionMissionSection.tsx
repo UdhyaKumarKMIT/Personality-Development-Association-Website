@@ -4,7 +4,7 @@ import { Target, Lightbulb, Users, TrendingUp } from "lucide-react";
 const VisionMissionSection = () => {
   const visionPoints = [
     "Become a thriving student organization supporting soft skills and leadership development",
-    "Serve as a link between alumni, industry leaders, and experts",
+    "Serve as a link between alumni, industry leaders, public speakers and experts",
     "Cultivate a healthy society of engineers",
     "Be acknowledged as an organization created by students for students",
   ];
@@ -12,7 +12,6 @@ const VisionMissionSection = () => {
   const missionPoints = [
     "Offer expert lectures to develop effective communicators and leaders",
     "Conduct contests to enhance understanding of personality development",
-    "Provide a supportive atmosphere for personal development and analytical thinking",
     "Establish industry partnerships to advance employment opportunities",
     "Maintain consistent communication with Alumni for guidance",
   ];
@@ -57,7 +56,7 @@ const VisionMissionSection = () => {
             </CardHeader>
             <CardContent>
             <ul className="space-y-3">
-                {visionPoints.map((point, index) => (
+                {missionPoints.map((point, index) => (
                   <li key={index} className="flex items-start gap-3">
                     <div className="mt-1 flex-shrink-0">
                       <div className="w-2 h-2 rounded-full bg-accent"></div>

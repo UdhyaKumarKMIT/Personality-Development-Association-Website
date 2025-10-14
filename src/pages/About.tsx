@@ -54,19 +54,19 @@ const About = () => {
         </section>
 
         {/* History */}
-        <section className="py-20 bg-background">
+        <section className="py-10 bg-background">
           <div className="container mx-auto px-4 max-w-4xl">
             <h2 className="text-4xl font-bold text-primary mb-8 text-center">Our Story</h2>
             <div className="prose prose-lg max-w-none">
               <p className="text-foreground/90 leading-relaxed mb-6 text-justify">
               The Personality Development Association (PDA) at MIT was founded in February 1984 by Shri K.V. Narayanan and a small group of passionate students. What started as a simple idea—to help students truly discover themselves—has grown into a vibrant community focused on overall personality development. Through workshops, activities, and events, PDA empowers students to build confidence, communicate effectively, and grow as individuals.
          </p>
-              <p className="text-foreground/80 leading-relaxed mb-6 text-justify" >
+              <p className="text-foreground/90 leading-relaxed mb-6 text-justify" >
                
-Over the years, PDA has guided thousands of MITians, nurturing not just their skills but their character. Guided by the philosophy of “Discover Thyself,” we encourage every student to look inward, rise upward, and step forward with purpose. PDA is more than an association—it’s a journey of growth, learning, and transformation.
+             Over the years, PDA has guided thousands of MITians, nurturing not just their skills but their character. Guided by the philosophy of “Discover Thyself,” we encourage every student to look inward, rise upward, and step forward with purpose. PDA is more than an association—it’s a journey of growth, learning, and transformation.
      
               </p>
-              <p className="text-foreground/80 leading-relaxed text-justify">
+              <p className="text-foreground/90 leading-relaxed text-justify">
                 Today, PDA stands as a beacon of transformation, having impacted hundreds of students
                 and continuing to expand our reach. Our commitment to excellence and innovation in
                 personality development remains unwavering as we look forward to shaping future
