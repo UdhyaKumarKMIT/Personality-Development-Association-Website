@@ -1,7 +1,5 @@
 import { Button } from "@/components/ui/button";
 import { Linkedin, Instagram, Mail } from "lucide-react";
-import heroWoman from "@/assets/hero-woman.png";
-import heroMan from "@/assets/hero-man.png";
 
 const HeroSection = () => {
   const scrollToAbout = () => {
@@ -15,11 +13,11 @@ const HeroSection = () => {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
           {/* Left Character */}
           <div className="hidden lg:flex justify-center animate-fade-in">
-            <img
-              src={heroWoman}
-              alt="Professional woman character"
-              className="w-64 h-auto object-contain"
-            />
+          <img src="/zenith.png"  alt="Professional woman character"
+              className="w-64 h-auto object-contain"/>
+
+
+         
           </div>
 
           {/* Center Content */}
@@ -72,7 +70,7 @@ const HeroSection = () => {
           {/* Right Character */}
           <div className="hidden lg:flex justify-center animate-fade-in">
             <img
-              src={heroMan}
+              src="/zest.png"
               alt="Professional man character"
               className="w-64 h-auto object-contain"
             />

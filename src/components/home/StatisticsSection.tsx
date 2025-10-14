@@ -72,26 +72,26 @@ const StatisticsSection = () => {
   const stats = [
     {
       icon: <Users className="text-primary" size={32} />,
-      value: 25,
-      label: "Staff Members",
+      value: 250,
+      label: "Students Members",
       suffix: "+",
     },
     {
       icon: <GraduationCap className="text-accent" size={32} />,
-      value: 500,
-      label: "Students Impacted",
+      value: 10,
+      label: "Events Conducted",
       suffix: "+",
     },
     {
       icon: <Award className="text-secondary" size={32} />,
-      value: 8,
+      value: 40,
       label: "Years of Excellence",
       suffix: "+",
     },
     {
       icon: <Calendar className="text-primary" size={32} />,
-      value: 50,
-      label: "Events Organized",
+      value: 800,
+      label: "PDA Library Books",
       suffix: "+",
     },
   ];

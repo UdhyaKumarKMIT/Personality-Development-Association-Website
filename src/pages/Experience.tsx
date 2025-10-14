@@ -7,6 +7,17 @@ import { Input } from "@/components/ui/input";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Search, Download, FileText, Building2, User } from "lucide-react";
 
+import UdhyaNokia from "@/assets/InterviewExperiences/UdhyaKumarKNokia.pdf";
+import TasneemAppian from "@/assets/InterviewExperiences/TasneemAppian.pdf";
+import SushmithaAmex from "@/assets/InterviewExperiences/Sushmitha_2026_American Express.pdf";
+import SAPLabsSanjeev from "@/assets/InterviewExperiences/SAP LABS INTERVIEW EXPERIENCE_SanjeevA.pdf";
+import LokeshAppian from "@/assets/InterviewExperiences/Lokesh_2026_Appian.pdf";
+import DivyaWellsFargo from "@/assets/InterviewExperiences/DivyaKannathaal_2026_Wells Fargo.pdf";
+import AjayTekion from "@/assets/InterviewExperiences/AjayMalarTekion.pdf";
+import AppianQE from "@/assets/InterviewExperiences/APPIAN_QE_interviewexp.pdf";
+import BaranidharanIDFC from "@/assets/InterviewExperiences/Baranidharan_2026_IDFC_First_Bank.pdf";
+
+
 interface Experience {
   name: string;
   company: string;
@@ -20,65 +31,27 @@ const Experience = () => {
   const [selectedExperience, setSelectedExperience] = useState<Experience | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
+  interface Experience {
+    name: string;
+    company: string;
+    role: string;
+    year: number;
+    dept: string;
+    pdf: string;
+  }
+  
   const experiences: Experience[] = [
-    {
-      name: "Aarav Mehta",
-      company: "Google",
-      role: "Software Engineer Intern",
-      dept: "CSE",
-      pdf: "/assets/interview_experiences/aarav_google.pdf",
-    },
-    {
-      name: "Priya Sharma",
-      company: "Amazon",
-      role: "Data Analyst",
-      dept: "IT",
-      pdf: "/assets/interview_experiences/priya_amazon.pdf",
-    },
-    {
-      name: "Rahul Verma",
-      company: "TCS",
-      role: "System Engineer",
-      dept: "ECE",
-      pdf: "/assets/interview_experiences/rahul_tcs.pdf",
-    },
-    {
-      name: "Sneha Nair",
-      company: "Deloitte",
-      role: "Consulting Analyst",
-      dept: "MBA",
-      pdf: "/assets/interview_experiences/sneha_deloitte.pdf",
-    },
-    {
-      name: "Karan Singh",
-      company: "Microsoft",
-      role: "SDE Intern",
-      dept: "CSE",
-      pdf: "/assets/interview_experiences/karan_microsoft.pdf",
-    },
-    {
-      name: "Ananya Reddy",
-      company: "Wipro",
-      role: "Project Engineer",
-      dept: "IT",
-      pdf: "/assets/interview_experiences/ananya_wipro.pdf",
-    },
-    {
-      name: "Rohan Patel",
-      company: "Infosys",
-      role: "Systems Engineer",
-      dept: "CSE",
-      pdf: "/assets/interview_experiences/rohan_infosys.pdf",
-    },
-    {
-      name: "Divya Kumar",
-      company: "Accenture",
-      role: "Application Development Associate",
-      dept: "IT",
-      pdf: "/assets/interview_experiences/divya_accenture.pdf",
-    },
+    { name: "Udhya Kumar", company: "Nokia", role: "Software Developer", year: 2025 ,dept: "Department of Computer Technology", pdf: UdhyaNokia },
+    { name: "Tasneem A", company: "Appian", role: "Software Developer",year: 2025 , dept: "Department of Computer Technology", pdf: TasneemAppian },
+    { name: "Sushmitha", company: "American Express", role: "Software Developer",year: 2025 , dept: "Department of Computer Technology", pdf: SushmithaAmex },
+    { name: "Sanjeev A", company: "SAP Labs", role: "Software Developer",year: 2025 , dept: "Department of Computer Technology", pdf: SAPLabsSanjeev },
+    { name: "Lokesh", company: "Appian", role: "Software Developer", year: 2025 ,dept: "Department of Computer Technology", pdf: LokeshAppian },
+    { name: "Divya Kannathaal", company: "Wells Fargo", role: "Software Developer",year: 2025 , dept: "Department of Computer Technology", pdf: DivyaWellsFargo },
+    { name: "Ajay Malar M", company: "Tekion", role: "Software Developer",year: 2025 , dept: "Department of Computer Technology", pdf: AjayTekion },
+    { name: "Appian QE", company: "Appian", role: "Software Developer",year: 2025 , dept: "Department of Computer Technology", pdf: AppianQE },
+    { name: "Baranidharan", company: "IDFC First Bank", role: "Software Developer",year: 2025 , dept: "Department of Computer Technology", pdf: BaranidharanIDFC },
   ];
-
+  
   const filteredExperiences = experiences.filter(
     (exp) =>
       exp.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -158,6 +131,7 @@ const Experience = () => {
                           <span className="font-semibold">{experience.company}</span>
                         </div>
                         <p className="text-sm text-muted-foreground">{experience.role}</p>
+                        <p className="text-sm text-muted-foreground">{experience.year}</p>
                         <p className="text-sm text-accent font-medium">Dept: {experience.dept}</p>
                       </div>
                       <Button

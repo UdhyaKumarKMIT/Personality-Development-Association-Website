@@ -23,7 +23,7 @@ const Footer = () => {
 
           {/* Navigation Links */}
           <div className="text-center">
-            <h4 className="font-semibold mb-4">Quick Links</h4>
+            <h4 className="font-semibold mb-2">Quick Links</h4>
             <div className="flex flex-wrap justify-center gap-4">
               {navLinks.map((link) => (
                 <Link
@@ -39,7 +39,7 @@ const Footer = () => {
 
           {/* Social Media */}
           <div className="text-center md:text-right">
-            <h4 className="font-semibold mb-4">Connect With Us</h4>
+            <h4 className="font-semibold mb-2">Connect With Us</h4>
             <div className="flex justify-center md:justify-end gap-4">
               <a
                 href="https://www.linkedin.com/company/personality-development-association-mit/"
@@ -71,7 +71,7 @@ const Footer = () => {
         </div>
 
         {/* Copyright */}
-        <div className="border-t border-primary-foreground/20 pt-6 text-center">
+        <div className="border-t border-primary-foreground/20 pt-1 text-center">
           <p className="text-primary-foreground/80">
             © {new Date().getFullYear()} PDA Website Team. All rights reserved.
           </p>

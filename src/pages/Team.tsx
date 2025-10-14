@@ -1,174 +1,126 @@
+import React from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { Card, CardContent } from "@/components/ui/card";
-import { Linkedin, Instagram } from "lucide-react";
+// Import all team images from teamimages folder
+import chairPerson from "@/assets/images/whatsapp20image202025-09-2720at2010.03.2020pm-479x491.jpeg";
+import viceChair from "@/assets/teamimages/whatsapp20image202025-09-2720at2010.03.3420pm201-600x695.jpeg";
+import genSec1 from "@/assets/teamimages/whatsapp20image202025-09-2720at2010.04.1320pm-600x708.jpeg";
+import genSec2 from "@/assets/teamimages/whatsapp20image202025-09-2720at2010.04.3520pm-480x565.jpeg";
+import genSec3 from "@/assets/teamimages/whatsapp20image202025-09-2720at2010.05.3020pm-384x453.jpeg";
+
+import contentHead1 from "@/assets/teamimages/whatsapp20image202025-09-2720at2010.12.3820pm201-600x714.jpeg";
+import contentHead2 from "@/assets/teamimages/whatsapp20image202025-09-2720at2010.05.4520pm201-600x706.jpeg";
+import contentHead3 from "@/assets/teamimages/whatsapp20image202025-09-2720at2010.12.2420pm201-600x716.jpeg";
+
+import eventHead1 from "@/assets/teamimages/whatsapp20image202025-09-2720at2010.12.5320pm-600x710.jpeg";
+import eventHead2 from "@/assets/teamimages/whatsapp20image202025-09-2720at2010.13.1020pm-600x703.jpeg";
+
+import treasurer1 from "@/assets/teamimages/whatsapp20image202025-09-2720at2010.15.3220pm201-600x707.jpeg";
+import treasurer2 from "@/assets/teamimages/whatsapp20image202025-09-2720at2010.15.4520pm-600x705.jpeg";
+
+import teamHead1 from "@/assets/teamimages/whatsapp20image202025-09-2720at2010.14.3420pm-600x711.jpeg";
+import teamHead2 from "@/assets/teamimages/whatsapp20image202025-09-2720at2010.14.4520pm-600x705.jpeg";
+import teamHead3 from "@/assets/teamimages/whatsapp20image202025-09-2720at2010.14.1220pm-600x705.jpeg";
 
 interface TeamMember {
   name: string;
-  regNo: string;
-  dept: string;
-  linkedin?: string;
-  instagram?: string;
+  role: string;
+  id?: string;
+  description?: string;
+  image: string;
 }
 
-const Team = () => {
-  const officeBearers: TeamMember[] = [
-    {
-      name: "Aarav Sharma",
-      regNo: "PDA2024A01",
-      dept: "CSE",
-      linkedin: "https://linkedin.com/in/aaravsharma",
-      instagram: "https://instagram.com/aaravsharma",
-    },
-    {
-      name: "Priya Patel",
-      regNo: "PDA2024A02",
-      dept: "ECE",
-      linkedin: "https://linkedin.com/in/priyapatel",
-      instagram: "https://instagram.com/priyapatel",
-    },
-    {
-      name: "Rohan Verma",
-      regNo: "PDA2024A03",
-      dept: "IT",
-      linkedin: "https://linkedin.com/in/rohanverma",
-      instagram: "https://instagram.com/rohanverma",
-    },
-  ];
+const teamSections: { title: string; description: string; members: TeamMember[] }[] = [
+  {
+    title: "MEET OUR TEAM",
+    description: "Welcome to the Personality Development Association – where confidence meets growth.",
+    members: [
+      { name: "AKSHAYA B G", role: "CHAIR PERSON", id: "(2022505024)", image: chairPerson },
+      { name: "SARAVANA T S", role: "VICE CHAIR PERSON", id: "(2022503574)", image: viceChair },
+      { name: "JAYAVARSHINI R", role: "GENERAL SECRETORY", id: "(2022503521)", image: genSec1 },
+      { name: "PREM KUMAR S", role: "GENERAL SECRETORY", id: "(2022501015)", image: genSec2 },
+      { name: "VARSHIGASHREE M", role: "GENERAL SECRETORY", id: "(2022504033)", image: genSec3 },
+    ],
+  },
+  {
+    title: "MEET OUR CONTENT CREATION HEADS",
+    description: "The creative mind behind all the words and visuals that make our association shine! ✍️✨ They turn ideas into engaging content.",
+    members: [
+      { name: "NEELAVATHY G", role: "Content Head", id: "(2022503513)", image: contentHead1 },
+      { name: "TRIZAH SULAMITE K", role: "Content Head", id: "(2022508008)", image: contentHead2 },
+      { name: "VIMAL RAJ M", role: "Content Head", id: "(2022504523)", image: contentHead3 },
+    ],
+  },
+  {
+    title: "MEET OUR EVENT MANAGEMENT HEADS",
+    description: "The powerhouse team that makes every event unforgettable! ⚡ From brainstorming unique ideas to executing them with perfection.",
+    members: [
+      { name: "DHIVYA M", role: "Event Head", id: "(2022511020)", image: eventHead1 },
+      { name: "GOPI M", role: "Event Head", id: "(2022506004)", image: eventHead2 },
+    ],
+  },
+  {
+    title: "MEET OUR TREASURERS",
+    description: "Meet the ones who balance funds! Our Treasurers make sure every dream project has the perfect budget to shine.",
+    members: [
+      { name: "DARSAN S", role: "Treasurer", id: "(2023508017)", image: treasurer1 },
+      { name: "SRIMATHI S", role: "Treasurer", id: "(2023510055)", image: treasurer2 },
+    ],
+  },
+  {
+    title: "MEET OUR TEAM HEADS",
+    description: "The tech brains of our club, the creative eyes behind every detail and the knowledge keeper of our club.",
+    members: [
+      { name: "UDHYA KUMAR K", role: "HEAD OF WEBSITE DESIGN", id: "(2022503051)", image: teamHead1 },
+      { name: "MADHESH P B", role: "CHIEF LIBRARIAN", id: "(2022507011)", image: teamHead2 },
+      { name: "VIJAY G K", role: "HEAD OF DESIGN", id: "(2022503053)", image: teamHead3 },
+    ],
+  },
+];
 
-  const prTeam: TeamMember[] = [
-    {
-      name: "Sneha Reddy",
-      regNo: "PDA2024P01",
-      dept: "MBA",
-      linkedin: "https://linkedin.com/in/snehareddy",
-      instagram: "https://instagram.com/snehareddy",
-    },
-    {
-      name: "Karan Singh",
-      regNo: "PDA2024P02",
-      dept: "CSE",
-      linkedin: "https://linkedin.com/in/karansingh",
-      instagram: "https://instagram.com/karansingh",
-    },
-  ];
-
-  const contentTeam: TeamMember[] = [
-    {
-      name: "Ananya Gupta",
-      regNo: "PDA2024C01",
-      dept: "EEE",
-      linkedin: "https://linkedin.com/in/ananyagupta",
-      instagram: "https://instagram.com/ananyagupta",
-    },
-    {
-      name: "Rahul Mehta",
-      regNo: "PDA2024C02",
-      dept: "MECH",
-      linkedin: "https://linkedin.com/in/rahulmehta",
-      instagram: "https://instagram.com/rahulmehta",
-    },
-  ];
-
-  const managementTeam: TeamMember[] = [
-    {
-      name: "Divya Nair",
-      regNo: "PDA2024M01",
-      dept: "CSE",
-      linkedin: "https://linkedin.com/in/divyanair",
-      instagram: "https://instagram.com/divyanair",
-    },
-    {
-      name: "Arjun Kumar",
-      regNo: "PDA2024M02",
-      dept: "IT",
-      linkedin: "https://linkedin.com/in/arjunkumar",
-      instagram: "https://instagram.com/arjunkumar",
-    },
-    {
-      name: "Meera Shah",
-      regNo: "PDA2024M03",
-      dept: "ECE",
-      linkedin: "https://linkedin.com/in/meerashah",
-      instagram: "https://instagram.com/meerashah",
-    },
-  ];
-
-  const TeamSection = ({ title, members }: { title: string; members: TeamMember[] }) => (
-    <section className="mb-16">
-      <h2 className="text-3xl font-bold text-primary mb-8 text-center">{title}</h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {members.map((member, index) => (
-          <Card
-            key={index}
-            className="shadow-card hover:shadow-hover transition-smooth group hover:-translate-y-2"
-          >
-            <CardContent className="pt-6 text-center">
-              {/* Avatar Placeholder */}
-              <div className="w-32 h-32 mx-auto mb-4 rounded-full bg-gradient-accent flex items-center justify-center text-primary-foreground text-4xl font-bold">
-                {member.name.split(" ").map((n) => n[0]).join("")}
-              </div>
-
-              <h3 className="text-xl font-semibold text-primary mb-1">{member.name}</h3>
-              <p className="text-sm text-muted-foreground mb-1">{member.regNo}</p>
-              <p className="text-sm text-accent font-medium mb-4">{member.dept}</p>
-
-              {/* Social Icons */}
-              <div className="flex justify-center gap-3 opacity-0 group-hover:opacity-100 transition-smooth">
-                {member.linkedin && (
-                  <a
-                    href={member.linkedin}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="bg-primary/10 p-2 rounded-full hover:bg-primary/20 transition-smooth"
-                    aria-label="LinkedIn"
-                  >
-                    <Linkedin size={18} className="text-primary" />
-                  </a>
-                )}
-                {member.instagram && (
-                  <a
-                    href={member.instagram}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="bg-accent/10 p-2 rounded-full hover:bg-accent/20 transition-smooth"
-                    aria-label="Instagram"
-                  >
-                    <Instagram size={18} className="text-accent" />
-                  </a>
-                )}
-              </div>
-            </CardContent>
-          </Card>
-        ))}
-      </div>
-    </section>
-  );
-
+const Team: React.FC = () => {
   return (
     <div className="min-h-screen">
-      <Navbar />
-      <main className="pt-20">
-        {/* Header */}
-        <section className="gradient-hero py-20">
-          <div className="container mx-auto px-4 text-center">
-            <h1 className="text-5xl font-bold text-primary mb-4">Meet Our Team</h1>
-            <p className="text-xl text-foreground/80 max-w-3xl mx-auto">
-              Dedicated individuals working together to empower and inspire
-            </p>
+      <Navbar/>
+    <div className="container mt-10 mx-auto px-4 py-12">
+      
+      {teamSections.map((section, index) => (
+        <div key={index} className="mb-16 text-center">
+          <h2 className="text-3xl font-bold mb-2">{section.title}</h2>
+          <p className="text-gray-700 mb-8">{section.description}</p>
+          <div className="flex flex-wrap justify-center gap-8">
+            {section.members.map((member, i) => (
+              <div key={i} className="max-w-xs text-center">
+                <img
+                  src={member.image}
+                  alt={member.name}
+                  className="w-48 h-48 object-cover mb-4"
+                />
+                <h3 className="text-xl font-semibold">{member.name}</h3>
+                <p className="text-gray-600">{member.role}</p>
+                {member.id && <p className="text-gray-500">{member.id}</p>}
+                <div className="flex justify-center mt-2 gap-4">
+                  <a
+                    href="https://www.instagram.com"
+                    target="_blank"
+                    className="text-pink-500"
+                  >
+                    Instagram
+                  </a>
+                  <a
+                    href="https://www.linkedin.com"
+                    target="_blank"
+                    className="text-blue-700"
+                  >
+                    LinkedIn
+                  </a>
+                </div>
+              </div>
+            ))}
           </div>
-        </section>
-
-        {/* Team Sections */}
-        <section className="py-20 bg-background">
-          <div className="container mx-auto px-4 max-w-6xl">
-            <TeamSection title="Office Bearers" members={officeBearers} />
-            <TeamSection title="PR Team" members={prTeam} />
-            <TeamSection title="Content Team" members={contentTeam} />
-            <TeamSection title="Management Team" members={managementTeam} />
-          </div>
-        </section>
-      </main>
+        </div>
+      ))}
+      </div>
       <Footer />
     </div>
   );
