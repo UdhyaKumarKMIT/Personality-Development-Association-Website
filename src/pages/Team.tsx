@@ -29,6 +29,8 @@ interface TeamMember {
   role: string;
   id?: string;
   description?: string;
+  linkedin?: string;
+  insta?: string;
   image: string;
 }
 
@@ -73,7 +75,7 @@ const teamSections: { title: string; description: string; members: TeamMember[] 
     title: "MEET OUR TEAM HEADS",
     description: "The tech brains of our club, the creative eyes behind every detail and the knowledge keeper of our club.",
     members: [
-      { name: "UDHYA KUMAR K", role: "HEAD OF WEBSITE DESIGN", id: "(2022503051)", image: teamHead1 },
+      { name: "UDHYA KUMAR K", role: "HEAD OF WEBSITE DESIGN", id: "(2022503051)", image: teamHead1 , linkedin: "https://www.linkedin.com/in/udhya-kumar-k-749b79210/", insta: "https://www.instagram.com/udhya_2004/"},
       { name: "MADHESH P B", role: "CHIEF LIBRARIAN", id: "(2022507011)", image: teamHead2 },
       { name: "VIJAY G K", role: "HEAD OF DESIGN", id: "(2022503053)", image: teamHead3 },
     ],
@@ -114,22 +116,23 @@ const Team: React.FC = () => {
                   )}
 
                   <div className="flex justify-center mt-4 space-x-5">
-                    <a
-                      href="https://www.instagram.com"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-pink-500 hover:text-pink-600 transition transform hover:scale-110"
-                    >
-                      <FaInstagram size={24} />
-                    </a>
-                    <a
-                      href="https://www.linkedin.com"
+                  <a
+                      href={member.linkedin ? member.linkedin : "https://www.linkedin.com"}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-blue-700 hover:text-blue-800 transition transform hover:scale-110"
                     >
                       <FaLinkedin size={24} />
                     </a>
+                    <a
+                      href={member.insta ? member.insta : "https://www.instagram.com"}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-pink-500 hover:text-pink-600 transition transform hover:scale-110"
+                    >
+                      <FaInstagram size={24} />
+                    </a>
+                  
                   </div>
                 </div>
               ))}

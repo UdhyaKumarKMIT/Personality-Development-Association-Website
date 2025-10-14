@@ -8,12 +8,12 @@ const Navbar = () => {
   const location = useLocation();
 
   const navItems = [
-    { name: "Home", path: "/#top" },
-    { name: "About Us", path: "/about#top" },
-    { name: "Events", path: "/events#top" },
-    { name: "Interview Experience", path: "/experience#top" },
-    { name: "Team", path: "/team#top" },
-    { name: "Contact", path: "/contact#top" },
+    { name: "Home", path: "/" },
+    { name: "About Us", path: "/about" },
+    { name: "Events", path: "/events" },
+    { name: "Interview Experience", path: "/experience" },
+    { name: "Team", path: "/team" },
+    { name: "Contact", path: "/contact" },  
   ];
 
   const isActive = (path: string) => location.pathname === path;
