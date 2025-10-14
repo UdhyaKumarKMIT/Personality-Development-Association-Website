@@ -23,9 +23,17 @@ const Navbar = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2">
-            <div className="text-2xl font-bold text-primary-foreground">PDA</div>
-          </Link>
+         
+
+<Link to="/" className="flex items-center space-x-2">
+  <img
+    src="/pdalogo.webp"
+    alt="PDA Logo"
+    className="w-13 h-13 object-contain"
+  />
+  <div className="text-2xl font-bold text-primary-foreground">PDA</div>
+</Link>
+
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-1">

@@ -171,8 +171,8 @@ const Contact = () => {
 
                 {/* Embedded Map */}
                 <div className="rounded-lg overflow-hidden shadow-card h-80">
-                  <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.5284407833587!2d80.04445731482162!3d13.012226990831086!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5260b8cc817f3d%3A0x9c1c89993f2e5e8f!2sAnna%20University%20MIT%20Campus!5e0!3m2!1sen!2sin!4v1234567890123!5m2!1sen!2sin"
+                  <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3007.4085689273056!2d80.13709327373529!3d12.94837538736484!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a525fac595c29ff%3A0xb76082ae18b51418!2sMadras%20Institute%20of%20Technology%2C%20Anna%20University!5e1!3m2!1sen!2sin!4v1758911526299!5m2!1sen!2sin" 
                     width="100%"
                     height="100%"
                     style={{ border: 0 }}

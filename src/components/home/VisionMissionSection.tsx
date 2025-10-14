@@ -3,10 +3,18 @@ import { Target, Lightbulb, Users, TrendingUp } from "lucide-react";
 
 const VisionMissionSection = () => {
   const visionPoints = [
-    "Empower students to discover their full potential",
-    "Create future leaders with strong personalities",
-    "Foster holistic personal and professional development",
-    "Build a community of confident and capable individuals",
+    "Become a thriving student organization supporting soft skills and leadership development",
+    "Serve as a link between alumni, industry leaders, and experts",
+    "Cultivate a healthy society of engineers",
+    "Be acknowledged as an organization created by students for students",
+  ];
+
+  const missionPoints = [
+    "Offer expert lectures to develop effective communicators and leaders",
+    "Conduct contests to enhance understanding of personality development",
+    "Provide a supportive atmosphere for personal development and analytical thinking",
+    "Establish industry partnerships to advance employment opportunities",
+    "Maintain consistent communication with Alumni for guidance",
   ];
 
   return (
@@ -48,21 +56,16 @@ const VisionMissionSection = () => {
               </div>
             </CardHeader>
             <CardContent>
-              <p className="text-foreground/80 leading-relaxed mb-4">
-                To provide a platform for students to enhance their personality, communication
-                skills, and professional etiquette through workshops, seminars, and interactive
-                events.
-              </p>
-              <div className="grid grid-cols-2 gap-4 mt-6">
-                <div className="flex items-center gap-2">
-                  <Users className="text-secondary" size={20} />
-                  <span className="text-sm font-medium">Community Building</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <TrendingUp className="text-secondary" size={20} />
-                  <span className="text-sm font-medium">Skill Development</span>
-                </div>
-              </div>
+              <ul className="space-y-2 mt-4">
+                {missionPoints.map((point, index) => (
+                  <li key={index} className="flex items-start gap-2 text-sm text-foreground/80">
+                    <div className="mt-1 flex-shrink-0">
+                      <div className="w-1.5 h-1.5 rounded-full bg-secondary"></div>
+                    </div>
+                    <span>{point}</span>
+                  </li>
+                ))}
+              </ul>
             </CardContent>
           </Card>
         </div>

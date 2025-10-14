@@ -1,4 +1,5 @@
 import React from "react";
+import { FaInstagram, FaLinkedin } from "react-icons/fa";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 // Import all team images from teamimages folder
@@ -79,47 +80,61 @@ const teamSections: { title: string; description: string; members: TeamMember[] 
 ];
 
 const Team: React.FC = () => {
+  
+
   return (
-    <div className="min-h-screen">
-      <Navbar/>
-    <div className="container mt-10 mx-auto px-4 py-12">
-      
-      {teamSections.map((section, index) => (
-        <div key={index} className="mb-16 text-center">
-          <h2 className="text-3xl font-bold mb-2">{section.title}</h2>
-          <p className="text-gray-700 mb-8">{section.description}</p>
-          <div className="flex flex-wrap justify-center gap-8">
-            {section.members.map((member, i) => (
-              <div key={i} className="max-w-xs text-center">
-                <img
-                  src={member.image}
-                  alt={member.name}
-                  className="w-48 h-48 object-cover mb-4"
-                />
-                <h3 className="text-xl font-semibold">{member.name}</h3>
-                <p className="text-gray-600">{member.role}</p>
-                {member.id && <p className="text-gray-500">{member.id}</p>}
-                <div className="flex justify-center mt-2 gap-4">
-                  <a
-                    href="https://www.instagram.com"
-                    target="_blank"
-                    className="text-pink-500"
-                  >
-                    Instagram
-                  </a>
-                  <a
-                    href="https://www.linkedin.com"
-                    target="_blank"
-                    className="text-blue-700"
-                  >
-                    LinkedIn
-                  </a>
+    <div className="min-h-screen bg-gradient-to-b from-white via-gray-50 to-gray-100 text-gray-900">
+      <Navbar />
+      <div className="container mt-10 mx-auto px-6 py-16">
+        {teamSections.map((section, index) => (
+          <div key={index} className="mb-20 text-center">
+            <h2 className="text-4xl font-extrabold text-gray-800 mb-2">
+              {section.title}
+            </h2>
+            <p className="text-gray-600 mb-10">{section.description}</p>
+
+            <div className="flex flex-wrap justify-center gap-10">
+              {section.members.map((member, i) => (
+                <div
+                  key={i}
+                  className="max-w-xs bg-white shadow-lg rounded-2xl p-6 hover:shadow-2xl transform hover:-translate-y-2 transition duration-300 ease-in-out border border-gray-200 hover:border-red-400"
+                >
+                  <img
+                    src={member.image}
+                    alt={member.name}
+                    className="w-40 h-40 object-cover rounded-full mx-auto mb-4 border-4 border-indigo-200 hover:border-indigo-500 transition duration-300"
+                  />
+                  <h3 className="text-2xl font-semibold mb-1 text-gray-800">
+                    {member.name}
+                  </h3>
+                  <p className="text-indigo-600 font-medium">{member.role}</p>
+                  {member.id && (
+                    <p className="text-gray-500 text-sm mt-1">{member.id}</p>
+                  )}
+
+                  <div className="flex justify-center mt-4 space-x-5">
+                    <a
+                      href="https://www.instagram.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-pink-500 hover:text-pink-600 transition transform hover:scale-110"
+                    >
+                      <FaInstagram size={24} />
+                    </a>
+                    <a
+                      href="https://www.linkedin.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-blue-700 hover:text-blue-800 transition transform hover:scale-110"
+                    >
+                      <FaLinkedin size={24} />
+                    </a>
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
-        </div>
-      ))}
+        ))}
       </div>
       <Footer />
     </div>

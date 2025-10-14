@@ -13,7 +13,7 @@ const Footer = () => {
 
   return (
     <footer className="bg-primary text-primary-foreground">
-      <div className="container mx-auto px-4 py-12">
+      <div className="container mx-auto px-4 py-7">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           {/* Logo & Tagline */}
           <div className="text-center md:text-left">
