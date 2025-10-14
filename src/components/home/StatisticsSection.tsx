@@ -90,7 +90,7 @@ const StatisticsSection = () => {
     },
     {
       icon: <Calendar className="text-primary" size={32} />,
-      value: 800,
+      value: 3000,
       label: "PDA Library Books",
       suffix: "+",
     },

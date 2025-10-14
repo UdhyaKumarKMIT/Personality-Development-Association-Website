@@ -19,7 +19,7 @@ import event11 from "@/assets/images/whatsapp20image202025-09-2820at2012.49.2120
 const events = [
   {
     title: "Internship Awareness Drive",
-    date: "Upcoming",
+    date: "6 October 2025",
     image: event1,
     description:
       "At this enriching expert talk, alumni speaker Sri Vignesh Devarajan shared invaluable insights on career growth, global job trends, and pursuing higher studies in Germany. Participants engaged with real-world tips and personal experiences, gaining a practical understanding of international market expectations and the steps to succeed abroad.",
@@ -216,6 +216,10 @@ const Events = () => {
         </div>
       </div>
     </section>
+
+
+
+
           <h2 className="text-4xl font-bold text-primary mb-12 text-center mt-10">Our Events</h2>
             <div className="max-w-4xl mx-auto relative">
               {/* Timeline Line */}
@@ -233,7 +237,7 @@ const Events = () => {
                     <div className="flex-1 flex justify-center md:justify-end md:pr-8">
                       <div className="flex flex-col items-center">
                         <span className="iconBackground w-4 h-4 rounded-full bg-accent mb-2"></span>
-                        <p className="text-sm font-semibold text-accent">{event.date}</p>
+                        <p className="text-2xl font-semibold text-accent">{event.date}</p>
                       </div>
                     </div>
                     <div className="flex-1">
@@ -249,7 +253,7 @@ const Events = () => {
                               className="w-full h-auto rounded-lg object-cover"
                             />
                           </div>
-                          <p className="text-foreground/80">{event.description}</p>
+                          <p className="text-foreground/90">{event.description}</p>
                         </CardContent>
                       </Card>
                     </div>

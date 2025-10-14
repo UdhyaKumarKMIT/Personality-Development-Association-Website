@@ -69,11 +69,11 @@ const CrestoraSection = () => {
 
               {/* Buttons */}
               <div className="flex flex-col sm:flex-row gap-4 pt-6">
-                <Button
-                  variant="secondary"
-                  size="lg"
-                  className="bg-white text-accent font-semibold text-lg px-8 transition-all duration-300 transform hover:scale-105 hover:shadow-[0_0_15px_rgba(255,255,255,0.5)]"
-                >
+              <Button
+  variant="outline"
+  size="lg"
+  className="bg-white text-accent font-semibold text-lg px-8 transition-all duration-300 transform hover:scale-105 hover:shadow-[0_0_15px_rgba(255,255,255,0.5)] hover:text-red-600"
+>
                   <a
                     href="https://docs.google.com/forms/d/e/1FAIpQLScFxZSWGixzAKsZbVfpTxcn2A2zv3IZy0aIcrLPWGA-S92I0A/viewform"
                     target="_blank"
@@ -83,11 +83,10 @@ const CrestoraSection = () => {
                   </a>
                 </Button>
                 <Button
-                  variant="outline"
-                  size="lg"
-                  className="bg-white text-accent font-semibold text-lg px-8 transition-all duration-300 transform hover:scale-105 hover:shadow-[0_0_15px_rgba(255,255,255,0.5)]"
-                  asChild
-                >
+  variant="outline"
+  size="lg"
+  className="bg-white text-accent font-semibold text-lg px-8 transition-all duration-300 transform hover:scale-105 hover:shadow-[0_0_15px_rgba(255,255,255,0.5)] hover:text-red-600"
+>
                   <a
                     href="https://crestora-25.vercel.app/"
                     target="_blank"
