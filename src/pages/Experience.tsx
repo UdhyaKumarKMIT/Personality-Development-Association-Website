@@ -75,8 +75,8 @@ const Experience = () => {
         {/* Header */}
         <section className="gradient-hero py-10">
           <div className="container mx-auto px-4 text-center">
-            <h1 className="text-5xl font-bold text-primary mb-3">Interview Experiences</h1>
-            <p className="text-xl text-foreground/80 max-w-3xl mx-auto">
+            <h1 className="text-4xl font-bold text-primary mb-3 mt-9 pt-10">Interview Experiences</h1>
+            <p className="text-xl text-foreground/80 max-w-3xl mx-auto pb-7">
               Real journeys shared by our students — learn, prepare, and succeed.
             </p>
           </div>
