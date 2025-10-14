@@ -2,7 +2,8 @@ import React from "react";
 import { FaInstagram, FaLinkedin } from "react-icons/fa";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-// Import all team images from teamimages folder
+
+
 import chairPerson from "@/assets/images/whatsapp20image202025-09-2720at2010.03.2020pm-479x491.jpeg";
 import viceChair from "@/assets/teamimages/whatsapp20image202025-09-2720at2010.03.3420pm201-600x695.jpeg";
 import genSec1 from "@/assets/teamimages/whatsapp20image202025-09-2720at2010.04.1320pm-600x708.jpeg";

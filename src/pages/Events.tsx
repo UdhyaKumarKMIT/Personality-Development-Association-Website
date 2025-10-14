@@ -241,7 +241,9 @@ const Events = () => {
                       </div>
                     </div>
                     <div className="flex-1">
-                      <Card className="shadow-card hover:shadow-hover transition-smooth">
+                      <Card className="shadow-card border-t-4 border-t-accent transition-transform duration-300 hover:scale-103 hover:shadow-[0_4px_20px_rgba(255,0,0,0.5)]
+
+transition-smooth">
                         <CardHeader>
                           <CardTitle className="text-2xl text-primary">{event.title}</CardTitle>
                         </CardHeader>

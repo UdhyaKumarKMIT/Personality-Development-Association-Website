@@ -29,7 +29,7 @@ const Navbar = () => {
   <img
     src="/pdalogo.webp"
     alt="PDA Logo"
-    className="w-13 h-13 object-contain"
+    className="w-12 h-12 object-contain"
   />
   <div className="text-2xl font-bold text-primary-foreground">PDA</div>
 </Link>
