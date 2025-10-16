@@ -5,7 +5,7 @@ const CrestoraSection = () => {
   const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
 
   // Set event date here (YYYY-MM-DD format)
-  const eventDate = new Date("2025-10-16T16:00:00");
+  const eventDate = new Date("2025-10-16T16:30:00");
 
   useEffect(() => {
     const timer = setInterval(() => {
